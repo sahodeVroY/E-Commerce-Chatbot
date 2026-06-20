@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.login-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  padding: 40px 32px 32px 32px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.logo {
+  color: #FF725E;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.welcome {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #f6d6cf;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff6f3;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #FF725E;
+}
+
+.password-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot {
+  font-size: 0.85rem;
+  color: #FF725E;
+  text-decoration: none;
+}
+
+.signin-btn {
+  background: #FF725E;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.signin-btn:hover {
+  background: #ff4d2e;
+}
+
+.signup-link {
+  text-align: center;
+  font-size: 0.92rem;
+  color: #888;
+}
+
+.signup-link a {
+  color: #FF725E;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.illustration-section {
+  flex: 1;
+  background: #FFF2EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.illustration-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.person-placeholder {
+  width: 120px;
+  height: 180px;
+  background: none;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .illustration-section {
+    border-radius: 0 0 24px 24px;
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .login-card {
+    width: 95vw;
+    padding: 24px 8vw;
+  }
+  .illustration-section {
+    display: none;
+  }
+} 

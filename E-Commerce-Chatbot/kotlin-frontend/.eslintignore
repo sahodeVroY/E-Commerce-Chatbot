@@ -1,0 +1,6 @@
+build
+kotlin_build
+my-app*
+node_modules/
+packages/react-scripts/fixtures
+packages/react-scripts/template

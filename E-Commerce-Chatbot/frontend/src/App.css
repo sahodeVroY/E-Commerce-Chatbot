@@ -1,0 +1,850 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chat-window {
+  width: 100%;
+  max-width: 400px;
+  min-height: 300px;
+  background: #222;
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 16px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.user-msg {
+  text-align: right;
+  margin: 8px 0;
+  color: #61dafb;
+}
+
+.bot-msg {
+  text-align: left;
+  margin: 8px 0;
+  color: #fff;
+}
+
+.chat-form {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background: #61dafb;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* E-commerce Layout */
+.EcomApp {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+.Ecom-header {
+  background: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Ecom-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+.Ecom-header nav a {
+  color: #fff;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.Ecom-main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+.Ecom-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  flex: 2;
+}
+.Ecom-product {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.Ecom-product:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+.Ecom-product img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.Ecom-product h3 {
+  margin: 0.5rem 0 0.2rem 0;
+}
+.Ecom-product p {
+  color: #444;
+  margin: 0.2rem 0 1rem 0;
+}
+.Ecom-product button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.Ecom-product button:hover {
+  background: #0056b3;
+}
+.Ecom-cart {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1rem 2rem;
+  min-width: 220px;
+  flex: 1;
+  height: fit-content;
+}
+.Ecom-cart h2 {
+  margin-top: 0;
+}
+.Ecom-cart ul {
+  list-style: none;
+  padding: 0;
+}
+.Ecom-cart li {
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Ecom-cart button {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.2rem 0.7rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Floating Chatbot Widget */
+.Chatbot-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+.Chatbot-open-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.Chatbot-open-btn:hover {
+  background: #0056b3;
+}
+.Chatbot-window {
+  width: 380px;
+  height: 550px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: chatbot-pop 0.2s;
+}
+@keyframes chatbot-pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.Chatbot-header {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+.Chatbot-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.chat-window {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #fdfdfd;
+}
+.user-msg {
+  text-align: right;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #3B82F6;
+  background: #e6f7ff;
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px 12px 2px 12px;
+  max-width: 85%;
+  align-self: flex-end;
+}
+.bot-msg {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #222;
+  background: #e0f9f6;
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px 12px 12px 2px;
+  max-width: 85%;
+  align-self: flex-start;
+}
+.chat-form {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 0.7rem 1rem;
+  background: #fff;
+}
+.chat-input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-right: 0.7rem;
+}
+.chat-form button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.chat-form button:hover {
+  background: #0056b3;
+}
+.Chatbot-float.open .Chatbot-open-btn {
+  display: none;
+}
+
+.Ecom-products-section {
+  width: 100%;
+}
+.Ecom-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.Ecom-filters select, .Ecom-search {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.Ecom-search {
+  flex: 1;
+  min-width: 180px;
+}
+.Ecom-product-desc {
+  color: #888;
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1rem 0;
+  min-height: 40px;
+}
+
+.Ecom-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.Ecom-modal {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: modal-pop 0.2s;
+}
+@keyframes modal-pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.Ecom-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.Ecom-modal-close:hover {
+  color: #222;
+}
+.Ecom-modal-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+}
+.Ecom-modal-category {
+  color: #007bff;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.Ecom-modal-desc {
+  color: #555;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.Ecom-modal-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+.Ecom-modal button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.Ecom-modal button:hover {
+  background: #0056b3;
+}
+
+.Ecom-cart-total {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+  text-align: right;
+}
+.Ecom-cart-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  justify-content: flex-end;
+}
+.Ecom-cart-removeall {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.Ecom-cart-removeall:hover {
+  background: #a71d2a;
+}
+.Ecom-cart-checkout {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.Ecom-cart-checkout:hover {
+  background: #1e7e34;
+}
+
+/* --- UI Polish & Theme Improvements --- */
+:root {
+  --primary: #FF725E; /* Orange */
+  --primary-dark: #ff4d2e;
+  --accent: #00E0C6; /* Teal - for success/add to cart */
+  --danger: #dc3545;
+  --danger-dark: #a71d2a;
+  --bg: #f7f7f7;
+  --card-bg: #fff;
+  --shadow: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-hover: 0 4px 16px rgba(0,0,0,0.13);
+}
+body, .EcomApp {
+  background: var(--bg);
+}
+.Ecom-header {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.Ecom-header nav a {
+  transition: color 0.2s;
+}
+.Ecom-header nav a:hover {
+  color: var(--accent);
+}
+.Ecom-main {
+  flex-wrap: wrap;
+}
+.Ecom-products {
+  gap: 2.2rem;
+}
+.Ecom-product {
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, transform 0.18s;
+  border: 1.5px solid #e3e3e3;
+  cursor: pointer;
+}
+.Ecom-product:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px) scale(1.025);
+  border-color: var(--primary);
+}
+.Ecom-product button {
+  background: var(--primary);
+  transition: background 0.2s, transform 0.1s;
+}
+.Ecom-product button:active {
+  background: var(--primary-dark);
+  transform: scale(0.97);
+}
+.Ecom-cart {
+  box-shadow: var(--shadow);
+  border: 1.5px solid #e3e3e3;
+}
+.Ecom-cart-removeall {
+  background: var(--danger);
+  transition: background 0.2s;
+}
+.Ecom-cart-removeall:hover {
+  background: var(--danger-dark);
+}
+.Ecom-cart-checkout {
+  background: var(--accent);
+  transition: background 0.2s;
+}
+.Ecom-cart-checkout:hover {
+  background: #00b39e; /* Darker teal */
+}
+.Chatbot-open-btn {
+  background: var(--primary);
+  transition: background 0.2s, transform 0.1s;
+}
+.Chatbot-open-btn:active {
+  background: var(--primary-dark);
+  transform: scale(0.96);
+}
+.Chatbot-window {
+  border: 1.5px solid #e3e3e3;
+}
+.Ecom-modal {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border: 1.5px solid #e3e3e3;
+}
+.Ecom-modal button {
+  background: var(--primary);
+  transition: background 0.2s, transform 0.1s;
+}
+.Ecom-modal button:active {
+  background: var(--primary-dark);
+  transform: scale(0.97);
+}
+/* Responsive Design */
+@media (max-width: 900px) {
+  .Ecom-main {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+  .Ecom-cart {
+    min-width: unset;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .Ecom-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+  }
+  .Ecom-header h1 {
+    font-size: 1.3rem;
+  }
+  .Ecom-products {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .Ecom-modal {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .Chatbot-window {
+    width: 98vw;
+    max-width: 98vw;
+    min-width: 0;
+    height: 70vh;
+  }
+  .Chatbot-float {
+    right: 2vw;
+    bottom: 2vw;
+  }
+}
+
+.LoginTabs {
+  display: flex;
+  justify-content: center;
+  margin: 1.2rem 0 0.5rem 0;
+  gap: 0.5rem;
+}
+.LoginTabs button {
+  background: #e3e9f7;
+  color: #222;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.LoginTabs button.active {
+  background: #FF725E;
+  color: #fff;
+}
+.SocialLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+.GoogleBtn {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #FF725E;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.GoogleBtn:hover {
+  background: #FF725E;
+  color: #fff;
+}
+.GithubBtn {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #333;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.GithubBtn:hover {
+  background: #333;
+  color: #fff;
+}
+.LoginLinks {
+  margin-top: 0.7rem;
+  text-align: right;
+}
+.LoginLink {
+  color: #FF725E;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.98rem;
+  transition: color 0.2s;
+}
+.LoginLink:hover {
+  color: #ff4d2e;
+}
+.LoginSuccess {
+  color: #00E0C6;
+  background: #e6f9ed;
+  border: 1px solid #00E0C6;
+  border-radius: 5px;
+  padding: 0.4rem 0.7rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.98rem;
+}
+.Ecom-modal[style*="max-width: 350"] {
+  min-width: 0;
+  width: 98vw;
+  max-width: 350px;
+  padding: 1.2rem 1rem 1rem 1rem;
+}
+
+.LogoutBtn {
+  background: #fff;
+  color: #FF725E;
+  border: 1.5px solid #FF725E;
+  border-radius: 6px;
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.LogoutBtn:hover {
+  background: #FF725E;
+  color: #fff;
+  border: 1.5px solid #ff4d2e;
+}
+
+/* --- Modern Login UI Styles --- */
+.LoginContainer {
+  display: flex;
+  min-height: 100vh;
+  background: #fff;
+}
+.LoginLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.LoginCard {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 48px 36px 36px 36px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transition: box-shadow 0.2s;
+}
+.LoginCard:hover {
+  box-shadow: 0 8px 32px rgba(255,114,94,0.10);
+}
+.LoginWelcome {
+  color: #888;
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+}
+.LoginTitle {
+  margin: 0 0 10px 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-align: center;
+}
+.LoginTabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  justify-content: center;
+}
+.LoginTabs button {
+  background: #e3e9f7;
+  color: #222;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.LoginTabs button.active {
+  background: #FF725E;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255,114,94,0.10);
+}
+.LoginTabs button:hover {
+  background: #ffd6cc;
+}
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2px;
+}
+input[type="email"],
+input[type="password"] {
+  padding: 12px;
+  border: 1.5px solid #f6d6cf;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff6f3;
+  outline: none;
+  margin-bottom: 8px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #FF725E;
+  box-shadow: 0 2px 8px rgba(255,114,94,0.10);
+}
+.PasswordRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.LoginLink {
+  font-size: 0.95rem;
+  color: #FF725E;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.LoginLink:hover {
+  color: #ff4d2e;
+}
+.LoginBtn {
+  background: #FF725E;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255,114,94,0.08);
+}
+.LoginBtn:hover {
+  background: #ff4d2e;
+  box-shadow: 0 4px 16px rgba(255,114,94,0.13);
+}
+.SignupLink {
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+  margin-top: 8px;
+}
+.LoginRight {
+  flex: 1;
+  background: #FFF2EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.LoginIllustrationSvg {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 900px) {
+  .LoginContainer {
+    flex-direction: column;
+  }
+  .LoginRight {
+    border-radius: 0 0 24px 24px;
+    min-height: 220px;
+  }
+}
+@media (max-width: 600px) {
+  .LoginContainer {
+    flex-direction: column;
+  }
+  .LoginCard {
+    width: 95vw;
+    padding: 24px 8vw;
+  }
+  .LoginRight {
+    display: none;
+  }
+}
+/* --- End Modern Login UI Styles --- */

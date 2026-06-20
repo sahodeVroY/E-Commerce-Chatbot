@@ -1,0 +1,16 @@
+*.tgz
+.DS_Store
+.idea/dictionaries/
+.idea/misc.xml
+.idea/watcherTasks.xml
+.idea/workspace.xml
+.vscode/
+/.changelog
+build
+lerna-debug.log
+my-app*
+node_modules/
+npm-debug.log*
+template/src/__tests__/__snapshots__/
+yarn-debug.log*
+yarn-error.log*
